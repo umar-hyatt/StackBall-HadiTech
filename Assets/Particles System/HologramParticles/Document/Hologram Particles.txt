@@ -1,0 +1,55 @@
+Hologram Particle
+
+This is a script based effect that works with Unity Shuriken Particle System to create many types of dynamic particle hologram simulations. The script works with the particle system and can use any medium to low poly mesh to display its shape with particles randomly along each mesh vertex. This script also has a waypoint option to give full control over particles that can follow animating or moving waypoints.
+
+Textures, Color and particle size is still controlled by the particle system.
+
+
+Suggestions and Notes: This script works with the particle system to create many effects. I would suggest that Particle life and color over time, be set on the particle system settings to have the best results. Lights can also be added to help enhance the overall effect. Please refer to Demo Scene for examples.
+
+Also due to a current particle system issue within Unity, the particle system transform must auto resize to the world area where particles are being rendered. The script will not allow any child objects to be attached to the particle system itself and auto re-parent the next level up. This is so that particles will render even though the source emitter may be off screen and also to prevent child objects from getting distorted scale. Other then that the system will work normally.
+
+
+Performance Notes: It is not suggested to load meshes with more then 8,000 vertices or use multiple hologram systems that use more than 12,000 vertices combined, as it may cause performance issues. try to keep custom meshes as low poly as possible. 
+
+
+
+Script Attributes:
+
+Enable - Enable and Disable particle control
+
+Jitter Amount - The amount particle randomly vibrate, 0 = disabled
+
+Particle Speed - The speed particles reaches their random vertex target
+
+Particle Rate - Controls the Particle System Emit rate
+
+Use random color - Randomly assigns a color to random particles every frame (the default particle system color is still used as new particles are created)
+
+Particle Static - When enabled particles will not end (must be disabled to use Evap and Dissolve)
+
+Particle End Type - (Particle Static must be disabled) Evap and Dissolve are the two styles that particles can perform at the end of their life.
+
+Evap Dir - Direction particles move in world space when Evap type is used
+
+Use Waypoints - Enables and disables the use of waypoints (waypoints must be tagged with the tag below to work. Any transform object in the scene can be tagged and it will auto detected)
+
+Waypoint Tag - The tag that all waypoints for each script will be used. (Multiple systems can be set up using waypoints as long as they all are set to different tags)
+
+Source Mesh Obj - The mesh that the particles will use the vertex shape of.
+
+Gather Pos - The position in world space, where the particle will gather in the mesh shape (Any transform object in the scene can be assigned. If no object is assigned then the script will default to the transform object it is attached to)
+
+Gather Scale - Scale of the mesh assigned based on the Gather pos origin point
+
+Preview Cube Size - Size of the red preview cubes to show the loaded mesh or waypoints assigned.
+
+
+
+
+
+Thanks
+
+Nik Kraus
+
+www.DarkCubeGames.com

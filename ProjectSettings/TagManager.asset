@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - box
+  - Sliceable
+  - WoodenBlock
+  - Coin
+  - Hurdle
+  - Yellow
+  - Black
+  - Blue
+  - Red
+  - Pink
+  - Green
+  - 2x
+  - 6x
+  - 3x
+  - 50x
+  - 4x
+  - 10x
+  - 1x
+  - Faild
+  - 8x
+  - 5x
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
