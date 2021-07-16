@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  particleSystem: {fileID: 0}
+  col: []
 --- !u!114 &11100788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  particleSystem: {fileID: 0}
+  col: []
 --- !u!114 &124701426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,7 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  particleSystem: {fileID: 0}
+  col: []
 --- !u!114 &642279600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -879,7 +879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  particleSystem: {fileID: 0}
+  col: []
 --- !u!114 &756911292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,7 +1090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  particleSystem: {fileID: 0}
+  col: []
 --- !u!54 &859581184
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  particleSystem: {fileID: 0}
+  col: []
 --- !u!54 &882496914
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1515,7 +1515,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d768c0ae047d6654e9f429fc9c2e2c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knife: {fileID: 1030712389}
+  ball1: {fileID: 0}
+  ball2: {fileID: 0}
+  ball3: {fileID: 0}
+  ball4: {fileID: 0}
   offset: {x: -8.06, y: 4.02, z: -8.22}
 --- !u!1 &977763017
 GameObject:
@@ -1554,7 +1557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  particleSystem: {fileID: 0}
+  col: []
 --- !u!54 &977763019
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1700,12 +1703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fdc8bb4eff504a7bafcdb5dfc21cf0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1030712389 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2984507203590645907, guid: 63a395b4c1ae48e448447c883b59509c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2984507202975433942}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1057151303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,7 +1828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1057151308}
-  particleSystem: {fileID: 9004664725253887513}
+  col: []
 --- !u!114 &1057151310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1915,7 +1912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1182545178}
-  particleSystem: {fileID: 9004664725253887513}
+  col: []
 --- !u!114 &1182545180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2044,7 +2041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  particleSystem: {fileID: 0}
+  col: []
 --- !u!54 &1282700877
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2241,7 +2238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  particleSystem: {fileID: 0}
+  col: []
 --- !u!114 &1314653029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2398,7 +2395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  particleSystem: {fileID: 0}
+  col: []
 --- !u!114 &1342294293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2513,7 +2510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  particleSystem: {fileID: 0}
+  col: []
 --- !u!54 &1380797794
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2712,7 +2709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  particleSystem: {fileID: 0}
+  col: []
 --- !u!114 &1463558961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2856,7 +2853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  particleSystem: {fileID: 0}
+  col: []
 --- !u!114 &1586739224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3000,7 +2997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  particleSystem: {fileID: 0}
+  col: []
 --- !u!114 &1614117704
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class LoadingScreen : MonoBehaviour
 {
     public void Start()
     {
+        Debug.Log("level name "+ PlayerPrefs.GetInt("LevelName"));
         StartCoroutine("Loading");
     }
     IEnumerator Loading()

@@ -17,6 +17,13 @@ public class UIManager : MonoBehaviour
     public GameObject[] levels;
     public GameObject[] pos;
     public GameObject finishingPanal, gameplayPanal, gameOverPanal, mainMenuPanal, ballHolder, shopPanal, settingPanal, ball1, ball2,ball3,ball4;
+    private void Awake()
+    {
+        if(PlayerPrefs.GetInt("CurrentLevel")==20)
+        {
+            PlayerPrefs.SetInt("CurrentLevel",Random.RandomRange(0,19));
+        }
+    }
     void Start()
     {
         for (int i = 2; i < 5; i++)
@@ -53,108 +60,107 @@ public class UIManager : MonoBehaviour
             ball4.SetActive(true);
         }
         ballMovement = (BallMovement)FindObjectOfType(typeof(BallMovement));
-
-
         levels[PlayerPrefs.GetInt("CurrentLevel")].SetActive(true);
+        levelCount.text = PlayerPrefs.GetInt("LevelName").ToString();
+        Debug.Log("level name "+ PlayerPrefs.GetInt("LevelName"));
         if (PlayerPrefs.GetInt("CurrentLevel") == 0)
         {
             ballHolder.transform.position = pos[0].transform.position;
-            levelCount.text = 1.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 1)
         {
             ballHolder.transform.position = pos[1].transform.position;
-            levelCount.text = 2.ToString();
+            //levelCount.text = 2.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 2)
         {
             ballHolder.transform.position = pos[2].transform.position;
-            levelCount.text = 3.ToString();
+            //levelCount.text = 3.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 3)
         {
             ballHolder.transform.position = pos[3].transform.position;
-            levelCount.text = 4.ToString();
+            //levelCount.text = 4.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 4)
         {
             ballHolder.transform.position = pos[4].transform.position;
-            levelCount.text = 5.ToString();
+            //levelCount.text = 5.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 5)
         {
             ballHolder.transform.position = pos[5].transform.position;
-            levelCount.text = 6.ToString();
+            //levelCount.text = 6.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 6)
         {
             ballHolder.transform.position = pos[6].transform.position;
-            levelCount.text = 7.ToString();
+            //levelCount.text = 7.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 7)
         {
             ballHolder.transform.position = pos[7].transform.position;
-            levelCount.text = 8.ToString();
+            //levelCount.text = 8.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 8)
         {
             ballHolder.transform.position = pos[8].transform.position;
-            levelCount.text = 9.ToString();
+            //levelCount.text = 9.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 9)
         {
             ballHolder.transform.position = pos[9].transform.position;
-            levelCount.text = 10.ToString();
+            //levelCount.text = 10.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 10)
         {
             ballHolder.transform.position = pos[10].transform.position;
-            levelCount.text = 11.ToString();
+            //levelCount.text = 11.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 11)
         {
             ballHolder.transform.position = pos[11].transform.position;
-            levelCount.text = 12.ToString();
+            //levelCount.text = 12.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 12)
         {
             ballHolder.transform.position = pos[12].transform.position;
-            levelCount.text = 13.ToString();
+            //levelCount.text = 13.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 13)
         {
             ballHolder.transform.position = pos[13].transform.position;
-            levelCount.text = 14.ToString();
+            //levelCount.text = 14.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 14)
         {
             ballHolder.transform.position = pos[14].transform.position;
-            levelCount.text = 15.ToString();
+            //levelCount.text = 15.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 15)
         {
             ballHolder.transform.position = pos[15].transform.position;
-            levelCount.text = 16.ToString();
+            //levelCount.text = 16.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 16)
         {
             ballHolder.transform.position = pos[16].transform.position;
-            levelCount.text = 17.ToString();
+            //levelCount.text = 17.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 17)
         {
             ballHolder.transform.position = pos[17].transform.position;
-            levelCount.text = 18.ToString();
+            //levelCount.text = 18.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 18)
         {
             ballHolder.transform.position = pos[18].transform.position;
-            levelCount.text = 19.ToString();
+            //levelCount.text = 19.ToString();
         }
         if (PlayerPrefs.GetInt("CurrentLevel") == 19)
         {
             ballHolder.transform.position = pos[19].transform.position;
-            levelCount.text = 20.ToString();
+            //levelCount.text = 20.ToString();
         }
         // if(selectballname == "ball1")
         // {
@@ -188,6 +194,7 @@ public class UIManager : MonoBehaviour
     }
     public void Nextlevel()
     {
+        PlayerPrefs.SetInt("LevelName",PlayerPrefs.GetInt("LevelName")+1);
         // SoundManager.instance.bgsource.mute = false;
         SoundManager.instance.Click();
         PlayerPrefs.SetInt("CurrentLevel", PlayerPrefs.GetInt("CurrentLevel") + 1);

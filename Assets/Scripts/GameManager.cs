@@ -1,29 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
+public class GameManager : MonoBehaviour
 
-namespace TrafficRacer
 {
-    /// <summary>
-    /// Script which keep track of game status and selected car 
-    /// </summary>
-    public class GameManager : MonoBehaviour
+    public static GameManager Instance
     {
-        UIManager uIManager;
-        public static GameManager singeton;
-        // [HideInInspector] public GameStatus gameStatus = GameStatus.NONE;
-        [HideInInspector] public int currentCarIndex = 0;
-
-        private void Start()
+        get
         {
-
+            if(instance==null)
+            instance=new GameObject("GameManager").AddComponent<GameManager>();
+            return instance;
         }
-        private void Awake()
-        {
-            if (singeton == null)
-            {
-                singeton = this;
-                DontDestroyOnLoad(gameObject);
+    }
+
+private static GameManager instance=null;
+    void Awake()
+    {
+       if(instance)
+       {
+           DestroyImmediate(gameObject);
+       }
+       else
+       {
+           instance=this;
+           DontDestroyOnLoad(gameObject);
+
+           //use your playerprefs and code
                 if (!PlayerPrefs.HasKey("CurrentLevel"))
                 {
                     PlayerPrefs.SetInt("CurrentLevel", 0);
@@ -52,15 +55,12 @@ namespace TrafficRacer
                 {
                     PlayerPrefs.SetInt("P4", 0);
                 }
-                // if (!PlayerPrefs.HasKey("ball2"))
-                // {
-                //     PlayerPrefs.SetInt("ball2", 2);
-                // }
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }
+                if(!PlayerPrefs.HasKey("LevelName"))
+                {
+                    PlayerPrefs.SetInt("LevelName",1);
+                }
+                Debug.Log("game manager ok he");
+           }
+       }
+
     }
-}

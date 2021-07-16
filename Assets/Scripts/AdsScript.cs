@@ -72,12 +72,12 @@ public class AdsScript : MonoBehaviour
         }
         void Start()
         {
-           
+           ShowSmartBanner();
         }
 
         public void RequestSmartBanner()
         {
-            SmartBanner = new BannerView(BannerId, AdSize.SmartBanner, AdPosition.Top);
+            SmartBanner = new BannerView(BannerId, AdSize.SmartBanner, AdPosition.Bottom);
             AdRequest requestSmartBanner = new AdRequest.Builder().Build();
             SmartBanner.LoadAd(requestSmartBanner);
             SmartBanner.Hide();
@@ -237,7 +237,7 @@ public class AdsScript : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("RemoveAds") != 1)
             {
-                BottomCenterBanner.Show();
+               // BottomCenterBanner.Show();
             }
         }
         public void ShowSmartBanner()
@@ -360,11 +360,11 @@ public class AdsScript : MonoBehaviour
         /// </summary>
         public void LoadAllAds()
         {
-            // RequestSmartBanner();
+             RequestSmartBanner();
             // RequestTopCenterBanner();
             // RequestBottomLeftBanner();
             // RequestBottomRightBanner();
-             RequestBottomCenterBanner();
+           //  RequestBottomCenterBanner();
             // RequestTopLeftLargeBanner();
             // RequestTopRightLargeBanner();
             // RequestBottomLeftLargeBanner();
@@ -372,7 +372,7 @@ public class AdsScript : MonoBehaviour
             // RequestTopLeftBanner();
             // RequestTopRightBanner();
             RequestInterstitial();
-            RequestRewardedads();
+           // RequestRewardedads();
         }
         public void RemoveAllAds()
         {

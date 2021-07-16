@@ -59,12 +59,12 @@ public class BallMovement : MonoBehaviour
     void Movement()
     {
         rb.AddForce(xforce, yforce, 0, ForceMode.Impulse);
-        rb.AddTorque(0f, 0f, -0.2f);
+        rb.AddTorque(0f, 0f, -0.5f);
     }
     
     private void OnCollisionEnter(Collision other)
     {
-        if (other.collider.tag == "Sliceable" && other.gameObject.tag == "Coin")
+        if (other.collider.tag == "Sliceable" || other.gameObject.tag == "Coin")
         {
             rb.velocity = Vector3.zero;
         }
@@ -106,7 +106,7 @@ public class BallMovement : MonoBehaviour
             uIManager.gameplayPanal.SetActive(false);
             Time.timeScale = 0;
         }
-        if (other.gameObject.tag == "10x")
+        else if (other.gameObject.tag == "10x")
         {
             AdsScript.instance.ShowInterstitial();
             SoundManager.instance.Reward();
@@ -119,7 +119,7 @@ public class BallMovement : MonoBehaviour
             uIManager.gameplayPanal.SetActive(false);
             Time.timeScale = 0;
         }
-        if (other.gameObject.tag == "8x")
+        else if (other.gameObject.tag == "8x")
         {
             SoundManager.instance.Reward();
             scoreText *= 8;
@@ -131,7 +131,7 @@ public class BallMovement : MonoBehaviour
             uIManager.gameplayPanal.SetActive(false);
             Time.timeScale = 0;
         }
-        if (other.gameObject.tag == "6x")
+        else if (other.gameObject.tag == "6x")
         {
             SoundManager.instance.Reward();
             scoreText *= 6;
@@ -143,7 +143,7 @@ public class BallMovement : MonoBehaviour
             uIManager.gameplayPanal.SetActive(false);
             Time.timeScale = 0;
         }
-        if (other.gameObject.tag == "5x")
+        else if (other.gameObject.tag == "5x")
         {
             SoundManager.instance.Reward();
             scoreText *= 5;
@@ -155,7 +155,7 @@ public class BallMovement : MonoBehaviour
             uIManager.gameplayPanal.SetActive(false);
             Time.timeScale = 0;
         }
-        if (other.gameObject.tag == "4x")
+        else if (other.gameObject.tag == "4x")
         {
             SoundManager.instance.Reward();
             scoreText *= 4;
@@ -167,7 +167,7 @@ public class BallMovement : MonoBehaviour
             uIManager.gameplayPanal.SetActive(false);
             Time.timeScale = 0;
         }
-        if (other.gameObject.tag == "3x")
+        else if (other.gameObject.tag == "3x")
         {
             SoundManager.instance.Reward();
             scoreText *= 3;
@@ -179,7 +179,7 @@ public class BallMovement : MonoBehaviour
             uIManager.gameplayPanal.SetActive(false);
             Time.timeScale = 0;
         }
-        if (other.gameObject.tag == "2x")
+        else if (other.gameObject.tag == "2x")
         {
             SoundManager.instance.Reward();
             scoreText *= 2;
@@ -191,7 +191,7 @@ public class BallMovement : MonoBehaviour
             uIManager.gameplayPanal.SetActive(false);
             Time.timeScale = 0;
         }
-        if (other.gameObject.tag == "1x")
+        else if (other.gameObject.tag == "1x")
         {
             SoundManager.instance.Reward();
             uIManager.finishingScore.text = scoreText.ToString();
