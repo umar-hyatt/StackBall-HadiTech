@@ -72,7 +72,7 @@ public class AdsScript : MonoBehaviour
         }
         void Start()
         {
-           ShowSmartBanner();
+           
         }
 
         public void RequestSmartBanner()

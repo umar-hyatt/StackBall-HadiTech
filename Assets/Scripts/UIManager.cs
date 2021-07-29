@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour
     }
     void Start()
     {
+        AdsScript.instance.ShowSmartBanner();
         for (int i = 2; i < 5; i++)
         {
             OpenedBallsCheck(PlayerPrefs.GetInt("P"+i),i);
