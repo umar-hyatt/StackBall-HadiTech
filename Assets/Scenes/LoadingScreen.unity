@@ -886,6 +886,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1648707190}
   - component: {fileID: 1648707191}
+  - component: {fileID: 1648707192}
   m_Layer: 0
   m_Name: noti
   m_TagString: Untagged
@@ -922,6 +923,18 @@ MonoBehaviour:
   repeatAfterDay: 1
   Title: Smash Hit!
   Content: came back And enjoy New Ball
+--- !u!114 &1648707192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648707189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd52df215faf45443a433bfee3048b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2031785877
 GameObject:
   m_ObjectHideFlags: 0
